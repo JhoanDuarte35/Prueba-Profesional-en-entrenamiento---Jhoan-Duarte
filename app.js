@@ -6,12 +6,13 @@ fetch(url)
 
 const mostrarDatos = (datos) => {
     console.log(datos);
-    let body = '';
+    let post = '';
     for(let i=0; i<10;i++){
-        body += `<tr><td>${datos.collection.items[i].data[0].title}</td><td>${datos.collection.items[i].data[0].description}</td><td>${datos.collection.items[i].links[0].href}</td></tr>`
+        post += `<tr><td>${datos.collection.items[i].data[0].title}</td>
+                <td>${datos.collection.items[i].data[0].description}</td>
+                <td><img src="${datos.collection.items[i].links[0].href}"></td></tr>`
     }   
-    document.getElementById('data').innerHTML=body;
-    console.log(body)
+    document.getElementById('data').innerHTML=post;
 }
 //collection.items.length
 
